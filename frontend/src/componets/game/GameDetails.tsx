@@ -1,0 +1,1 @@
+//	Shows one game (can have scores, stats, time, location)

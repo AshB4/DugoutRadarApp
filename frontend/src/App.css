@@ -1,0 +1,26 @@
+/* 🎨 Color variables */
+:root {
+  --color-gold: #FFC72C;
+  --color-orange: #FF6F00;
+  --color-ice: #81D4FA;
+  --color-navy: #143049;
+  --color-black: #212121;
+  --color-offwhite: #FAF9F6;
+  --color-purple: #7E57C2;
+}
+
+/* 🌐 Font styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: var(--color-navy);
+}
+
+body, p, span, li, label, input, button {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  color: var(--color-black);
+  background-color: var(--color-offwhite);
+  line-height: 1.5;
+}
