@@ -1,8 +1,6 @@
 // seeds/game.seeds.ts
 import { DataSource } from 'typeorm';
-import { Game } from '../src/game/entities/game.entity';
-
-
+import { Game } from './game/entities/game.entity';
 
 export const gameSeed: Partial<Game>[] = [
   {
@@ -75,7 +73,6 @@ export const gameSeed: Partial<Game>[] = [
     location: 'BF4, St. Julien Park',
     league: 'Louisiana Little League – LL Softball',
   },
-  
 ];
 const dataSource = new DataSource({
   type: 'postgres',
@@ -88,13 +85,16 @@ const dataSource = new DataSource({
   synchronize: true,
 });
 
-dataSource.initialize().then(async () => {
-  const repo = dataSource.getRepository(Game);
-  await repo.clear(); // Optional: wipes old data
-  await repo.save(gameSeed);
-  console.log('✅ Seed complete!');
-  process.exit(0);
-}).catch((e) => {
-  console.error('❌ Seeding failed:', e);
-  process.exit(1);
-});
+dataSource
+  .initialize()
+  .then(async () => {
+    const repo = dataSource.getRepository(Game);
+    await repo.clear(); // Optional: wipes old data
+    await repo.save(gameSeed);
+    console.log('✅ Seed complete!');
+    process.exit(0);
+  })
+  .catch((e) => {
+    console.error('❌ Seeding failed:', e);
+    process.exit(1);
+  });

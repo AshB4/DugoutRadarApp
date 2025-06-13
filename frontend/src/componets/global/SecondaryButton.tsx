@@ -29,3 +29,4 @@ const SecondaryButton: React.FC<{ label: string; onClick?: () => void }> = ({
 };
 
 export default SecondaryButton;
+export {};

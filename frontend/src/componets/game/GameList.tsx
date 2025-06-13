@@ -30,3 +30,4 @@ const GameList: React.FC<GameListProps> = ({ games }) => {
 };
 
 export default GameList;
+export {};

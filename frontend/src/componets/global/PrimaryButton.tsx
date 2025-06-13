@@ -29,3 +29,4 @@ const PrimaryButton: React.FC<{ label: string; onClick?: () => void }> = ({
 };
 
 export default PrimaryButton;
+export {};

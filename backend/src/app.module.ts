@@ -1,10 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Game } from './game/entities/game.entity';
+import { Game } from '../seeds/game/entities/game.entity';
 import { MlbModule } from './mlb/mlb.module';
-import { GameModule } from './game/game.module';
+import { GameModule } from '../seeds/game/game.module';
 import { AppController } from './app.controller';
-
 
 @Module({
   imports: [
