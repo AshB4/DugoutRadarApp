@@ -24,18 +24,3 @@ body, p, span, li, label, input, button {
   background-color: var(--color-offwhite);
   line-height: 1.5;
 }
-/* App.css or a specific CSS file */
-
-body {
-  background-image: url('/images/bg-laptop.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Target tablets & phones */
-@media (max-width: 1024px) {
-  body {
-    background-image: url('/images/bg-mobile.jpg');
-  }
-}
