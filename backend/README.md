@@ -1,99 +1,134 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# ⚾ Dugout Radar
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+**Dugout Radar** is a mobile-first baseball tracking app that helps fans and families follow local leagues, upcoming games, and real-time updates — fast, clear, and accessible.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+> 🚧 **Under Active Development** — This is a live full-stack project built as a showcase for performance, usability, and real-world data integration.
 
-## Description
+---
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 🔗 Developer Links
 
-## Project setup
+- 🧠 [Portfolio](https://ashb4.github.io)
+- 🐙 [GitHub](https://github.com/AshB4/DugoutRadarApp)
+- 💼 [LinkedIn](https://www.linkedin.com/in/ashley-m-broussard-33a392253)
+
+---
+
+## 💡 Why I Built This
+
+As a developer with a passion for sports and community, I created **Dugout Radar** to solve a familiar problem: local game info is scattered and unreliable. Built under real constraints, this project reflects my ability to ship full-stack apps fast — with focus on UX, clarity, and clean architecture. It aligns with the values of teams like Marucci Sports and Fox Factory, blending real-world context with developer precision.
+
+---
+
+## 🚀 Features
+
+- 🔍 Filter games by team, date, or league
+- 🧠 Smart UX with conditional views and debounce logic
+- ⚙️ Full CRUD backend for games and teams
+- 🔌 Connects to live and mock APIs via Axios
+- 🧪 Robust test suite with Jest for backend logic
+- 📱 Mobile-first, responsive frontend with Styled Components
+- 🌐 PostgreSQL database integration (via TypeORM + NestJS)
+
+---
+
+## 🧱 Tech Stack
+
+### ⚛️ **Frontend** 
+- **React 19** (CRA)
+- **TypeScript**
+- **React Router v6**
+- **Styled Components**
+- **Lodash.debounce**
+- **Jest + Testing Library**
+
+### 🔧 **Backend**
+- **NestJS** (v10)
+- **TypeORM**
+- **PostgreSQL**
+- **Axios**
+- **Class-validator / Class-transformer**
+- **Jest for unit + e2e testing**
+
+---
+
+## 📁 Project Structure
+DugoutRadarApp/
+├── frontend React + CRA + Styled Components
+├── backend NestJS + PostgreSQL + REST API
+└── README.md # Project overview
+
+
+### 🚧 Current Focus
+
+- [ ] Backend game API integration  
+- [ ] Filterable team selection  
+- [ ] Local storage of preferences  
+- [ ] Responsive design for mobile screens  
+
+---
+
+_Thanks for checking out the project — feel free to star it if you're interested in updates! ⭐_
+
+
+**Dugout Radar** is a full-stack mobile application that helps baseball fans discover and filter upcoming games, with a focus on local leagues and youth teams.
+
+This project was built as a demonstration of modern mobile-first development, featuring a React Native frontend with Tailwind styling and a NestJS backend API.
+
+---
+
+## 🚀 Features
+
+- 🔎 Filter games by team, date, or league
+- 🧠 Smart UI optimized for mobile users
+- ⚙️ Full CRUD API for managing games and teams
+- 📡 API integration ready for live or mock data
+- 📱 Built with React + TypeScript
+- 🌐 Backend powered by NestJS
+
+---
+
+
+## 🛠️ Setup Instructions
+
+### 1. Clone the repo
 
 ```bash
-$ npm install
-```
+git clone https://github.com/AshB4/DugoutRadarApp.git
+cd dugout-radar
 
-## Compile and run the project
+```
+2. Install and run frontend (React Native + Expo)
+
+```
+cd frontend
+npm install
+npx expo start
+
+```
+3. Install and run backend (NestJS)
+
 
 ```bash
-# development
-$ npm run start
+cd backend
+npm install
+npm run start:dev
 
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
 
-## Run tests
+💡 Inspiration
+Originally built to align with Marucci Sports' values of local roots, athletic performance, and high-quality tools. Designed as a portfolio app to demonstrate real-world mobile development and clean UX under time pressure.
 
-```bash
-# unit tests
-$ npm run test
+✨ Future Enhancements
+Push notifications for game updates
+Persistent data with PostgreSQL
+Admin panel for league coordinators
 
-# e2e tests
-$ npm run test:e2e
+📸 Screenshots
+Coming soon — UI in progress
 
-# test coverage
-$ npm run test:cov
-```
+👩‍💻 Author
+Ashley Broussard
+✉️ fleurdeviefarmsllc@gmail.com
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+⭐ If this project resonates with you, give it a star and follow for future updates!
