@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import GameFilters from '../componets/game/GameFilters';
 import GameList from '../componets/game/GameList';
 import LiveGames from '../componets/game/LiveGames';
+import DynamicBg from '../componets/global/DynamicBg';
 
 const GamesPage = () => {
   const [games, setGames] = useState([]);
@@ -19,6 +20,7 @@ const GamesPage = () => {
   }, [leagueFilter]);
 
   return (
+    <DynamicBg>
     <div>
       <h1>All Games</h1>
       <>
@@ -28,6 +30,7 @@ const GamesPage = () => {
 </>
 
     </div>
+    </DynamicBg>
   );
 };
 

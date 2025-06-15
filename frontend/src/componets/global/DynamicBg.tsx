@@ -2,18 +2,23 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
+import BgLappy from '../../assets/LappyBg.webp';
+import BgCell from '../../assets/CellBg.webp';
+import BgGrass from '../../assets/GreenGrassWhiteLine.webp'
+
 
 const BgWrapper = styled.div<{ bgUrl: string }>`
   min-height: 100vh;
   background-image: url(${(props) => props.bgUrl});
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; 
   background-repeat: no-repeat;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(6px);
-  border-radius: 12px;
+  background-attachment: fixed;
   padding: 2rem;
+  border-radius: 12px;
+
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
 
   @media (max-width: 768px) {
     background-attachment: scroll;
@@ -25,27 +30,22 @@ interface DynamicBgProps {
 }
 
 const DynamicBg: React.FC<DynamicBgProps> = ({ children }) => {
-  const location = useLocation();
-  const path = location.pathname;
-
+  const { pathname } = useLocation();
   const isMobile = window.innerWidth < 768;
 
-  // Map route to background type or image directly
-  const getBackgroundUrl = () => {
-    if (path === '/' || path === '/games') {
-      return isMobile ? '/images/diamond-mobile.jpg' : '/images/diamond-desktop.jpg';
+  const getBg = () => {
+    if (pathname === '/' || pathname === '/games') {
+      return isMobile ? BgLappy: BgCell;
     }
 
-    if (path === '/terms' || path === '/privacy' || path === '/contact' || path === '/about') {
-      return '/images/grass.jpg';
+    if (['/terms', '/privacy', '/contact', '/about'].includes(pathname)) {
+      return BgGrass;
     }
 
-    return '/images/diamond-desktop.jpg'; // fallback
+    return isMobile ? BgCell : BgLappy; // fallback to general layout backgrounds
   };
 
-  const bgUrl = getBackgroundUrl();
-
-  return <BgWrapper bgUrl={bgUrl}>{children}</BgWrapper>;
+  return <BgWrapper bgUrl={getBg()}>{children}</BgWrapper>;
 };
 
 export default DynamicBg;

@@ -1,8 +1,10 @@
 import React from 'react';
 import Card from '../componets/global/Card';
+import DynamicBg from '../componets/global/DynamicBg';
 
 const Privacy = () => {
   return (
+    <DynamicBg>
     <Card>
       <h2>Privacy Policy</h2>
       <p>
@@ -41,6 +43,7 @@ const Privacy = () => {
         yourself.
       </p>
     </Card>
+    </DynamicBg>
   );
 };
 

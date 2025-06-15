@@ -1,8 +1,10 @@
 import React from 'react';
 import Card from '../componets/global/Card';
+import DynamicBg from '../componets/global/DynamicBg';
 
 const Contact = () => {
   return (
+    <DynamicBg>
     <Card>
       <h2>Contact the DugoutRadar Team</h2>
       <p>
@@ -41,6 +43,7 @@ const Contact = () => {
         answering while juggling coffee and code.
       </p>
     </Card>
+    </DynamicBg>
   );
 };
 

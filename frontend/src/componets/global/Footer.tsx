@@ -20,6 +20,23 @@ const FooterWrapper = styled.footer`
   }
 `;
 
+const FooterContent = styled.div`
+  width: 100%;
+  max-width: 1200px; /* or whatever your site max is */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+`;
+
+
 const FooterLeft = styled.div`
   display: flex;
   align-items: center;
@@ -79,18 +96,20 @@ const FooterText = styled.p`
 const Footer: React.FC = () => {
   return (
     <FooterWrapper>
+       <FooterContent>
       <FooterLeft>
         <FooterLogo src={logo} alt="DugoutRadar Logo" />
       </FooterLeft>
 
       <FooterRight>
         <FooterLinks>
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">Contact</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/contact">Contact</a>
         </FooterLinks>
         <FooterText>© 2025 DugoutRadar. All rights reserved.</FooterText>
       </FooterRight>
+      </FooterContent>
     </FooterWrapper>
   );
 };

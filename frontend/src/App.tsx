@@ -8,6 +8,8 @@ import GamesPage from './pages/Games';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import About from './pages/About';
+import Contact from './pages/Contact';
+// import LiveGames from './pages/LiveGames'; 
 
 import './App.css';
 import styled from 'styled-components';
@@ -34,6 +36,8 @@ function App() {
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            {/* <Route path="/live/:gameId" element={<LiveGames />} /> */}
           </Routes>
         </PageContent>
         <Footer />

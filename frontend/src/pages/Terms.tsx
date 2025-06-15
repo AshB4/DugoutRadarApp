@@ -1,8 +1,10 @@
 import React from 'react';
 import Card from '../componets/global/Card';
+import DynamicBg from '../componets/global/DynamicBg';
 
 const Terms = () => {
   return (
+    <DynamicBg>
     <Card>
       <h2>Terms of Service</h2>
 
@@ -49,6 +51,7 @@ const Terms = () => {
         Thank you for supporting grassroots baseball and responsible data use.
       </p>
     </Card>
+    </DynamicBg>
   );
 };
 
