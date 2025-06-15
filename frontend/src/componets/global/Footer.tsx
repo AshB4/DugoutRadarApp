@@ -22,7 +22,8 @@ const FooterWrapper = styled.footer`
 
 const FooterContent = styled.div`
   width: 100%;
-  max-width: 1200px; /* or whatever your site max is */
+  max-width: 1200px;
+  padding: 0 1rem; 
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -42,8 +43,7 @@ const FooterLeft = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 1023px) {
-    order: 2;
+
   }
 `;
 
@@ -59,6 +59,8 @@ const FooterRight = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  gap: 0.5rem;
 
   @media (min-width: 1024px) {
     align-items: flex-end;
